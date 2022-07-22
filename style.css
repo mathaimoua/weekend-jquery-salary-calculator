@@ -30,6 +30,7 @@ header {
   background: darkgrey;
   border: 1px solid black;
   border-collapse: collapse;
+  font-weight: bold;
 }
 
 #tableBotRow {
@@ -64,6 +65,7 @@ header {
   height: 600px;
   width: 900px;
   align-items: center;
+  background-color: rgb(255, 249, 211);
 }
 
 #calcTitle {

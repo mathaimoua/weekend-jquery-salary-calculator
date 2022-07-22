@@ -34,26 +34,17 @@ function submitData(){
                             <td class="trtd">`+empData[3]+`</td>
                             <td class="salSpace">$`+" "+Number(empData[4])+`</td>
                             <td class="delBtnSpace"><button id="delBtn">Delete</button></td></tr>
-                            <tr id="tableBotRow"><td id="emptyBotRow" colspan="6"></td></tr>`);
-  // $('.empRow').append(`<tr>`);
-  // $('.empRow').append(`<td class="trtd">`+empData[0]+`</td>`);
-  // $('.empRow').append(`<td class="trtd">`+empData[1]+`</td>`);
-  // $('.empRow').append(`<td class="trtd">`+empData[2]+`</td>`);
-  // $('.empRow').append(`<td class="trtd">`+empData[3]+`</td>`);
-  // $('.empRow').append(`<td class="salSpace">$`+" "+Number(empData[4])+`</td>`);
-  // $('.empRow').append(`<td class="delBtnSpace"><button id="delBtn">Delete</button></td></tr>`);
+                            <tr id="tableBotRow"><td id="emptyBotRow" colspan="6"></td>
+                            </tr>`);
   } else {
     console.log('Fill all boxes!');
     return -1;
   }
-  //console.log(monthlyCost);
 }
 
 function deleteRow(){
-  // console.log($(this).closest('tr').find('.salSpace').text().slice(2));
   let numberSubtract = Number($(this).closest('tr').find('.salSpace').text().slice(2));
   monthlyCost -= numberSubtract
-  // console.log(monthlyCost);
   if (monthlyCost <= 20000){
     $('#monthlyCostText').css("background-color", "white");
   } else if (monthlyCost > 20000){
