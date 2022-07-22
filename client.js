@@ -22,6 +22,9 @@ function submitData(){
   $('#titleBox').val('');
   $('#salaryBox').val('');
   monthlyCost += Number(empData[4]);
+  if (monthlyCost > 20000){
+    $('#monthlyCostText').css("background-color","lightcoral");
+  }
   $('#monthlyCostField').text('$'+Number(monthlyCost));
   $('#tableBotRow').remove();
   $('#mainTable').append(`<tr>
@@ -43,7 +46,7 @@ function submitData(){
     console.log('Fill all boxes!');
     return -1;
   }
-  console.log(monthlyCost);
+  //console.log(monthlyCost);
 }
 
 function deleteRow(){
@@ -51,6 +54,11 @@ function deleteRow(){
   let numberSubtract = Number($(this).closest('tr').find('.salSpace').text().slice(2));
   monthlyCost -= numberSubtract
   // console.log(monthlyCost);
+  if (monthlyCost <= 20000){
+    $('#monthlyCostText').css("background-color", "white");
+  } else if (monthlyCost > 20000){
+    $('#monthlyCostText').css("background-color", "lightcoral");
+  }
   $('#monthlyCostField').text('$'+Number(monthlyCost));
   $(this).closest('tr').remove();
 }
