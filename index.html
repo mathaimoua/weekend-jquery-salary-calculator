@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="client.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Salary Calculator</title>
+</head>
+<body>
+  <div id="app">
+  <header>
+    <h1 id="calcTitle">Salary Calculator</h1>
+  </header>
+  <div id="underCalcTitle">
+    <p><h3>Add Employee</h3></p>
+    <table id="inputsTable">
+      <tr>
+        <td>
+          <input id="fName" type="text" placeholder="First Name">
+          <input id="lName" type="text" placeholder="Last Name">
+          <input id="idBox" type="number" placeholder="ID">
+          <input id="titleBox" type="text" placeholder="Title">
+          <input id="salaryBox" type="number" placeholder="Salary">
+        </td>
+        </tr>
+      <tr id="submitBtnRow">
+        <td>
+        <button id="submitBtn" style="float: right;">Submit</button>
+        </td>
+      </tr> 
+  </table>
+  </div>
+  <div id="tableDiv">
+    <table id="mainTable">
+      <thead><h3>Employees</h3>
+        <tr id="tableTopRow">
+          <td class="trtd">First Name</td>
+          <td class="trtd">Last Name</td>
+          <td class="trtd">ID</td>
+          <td class="trtd">Title</td>
+          <td class="trtd">Annual Salary</td>
+          <td class="butSpace"></td>
+        </tr>
+        <tr class="empRow">
+        </tr>
+        <tr id="tableBotRow"><td id="emptyBotRow" colspan="6"></td></tr>
+      </thead>
+    </table>
+  </div>
+  <div id="monthlyDiv"><h1 id="monthlyCostField" style="float: right;">$0</span><h1 style="float: right;">Monthly Cost:</h1>
+  </div>
+  </div> 
+</body>
+</html>
