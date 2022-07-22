@@ -5,7 +5,7 @@ let monthlyCost = 0.00;
 
 function readyNow(){
   console.log('readyNow!');
-  $('#inputsTable').on('click', submitData);
+  $('#submitBtn').on('click', submitData);
   $('#mainTable').on('click', '#delBtn', deleteRow);
 }
 
@@ -38,6 +38,7 @@ function submitData(){
                             </tr>`);
   } else {
     console.log('Fill all boxes!');
+    alert("Please fill all boxes with information!");
     return -1;
   }
 }
