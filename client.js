@@ -1,7 +1,7 @@
 $(document).ready(readyNow);
 
 let empData = [];
-let monthlyCost = 0;
+let monthlyCost = 0.00;
 
 function readyNow(){
   console.log('readyNow!');
@@ -25,13 +25,13 @@ function submitData(){
   if (monthlyCost > 20000){
     $('#monthlyCostText').css("background-color","lightcoral");
   }
-  $('#monthlyCostField').text('$'+Number(monthlyCost));
+  $('#monthlyCostField').text('$'+parseFloat(Number(monthlyCost)).toFixed(2));
   $('#tableBotRow').remove();
   $('#mainTable').append(`<tr>
-                            <td class="trtd">`+empData[0]+`</td>
-                            <td class="trtd">`+empData[1]+`</td>
-                            <td class="trtd">`+empData[2]+`</td>
-                            <td class="trtd">`+empData[3]+`</td>
+                            <td class="ertd">`+empData[0]+`</td>
+                            <td class="ertd">`+empData[1]+`</td>
+                            <td class="ertd">`+empData[2]+`</td>
+                            <td class="ertd">`+empData[3]+`</td>
                             <td class="salSpace">$`+" "+Number(empData[4])+`</td>
                             <td class="delBtnSpace"><button id="delBtn">Delete</button></td></tr>
                             <tr id="tableBotRow"><td id="emptyBotRow" colspan="6"></td>
@@ -44,12 +44,12 @@ function submitData(){
 
 function deleteRow(){
   let numberSubtract = Number($(this).closest('tr').find('.salSpace').text().slice(2));
-  monthlyCost -= numberSubtract
+  monthlyCost -= numberSubtract;
   if (monthlyCost <= 20000){
-    $('#monthlyCostText').css("background-color", "white");
+    $('#monthlyCostText').css("background-color", "rgb(255, 249, 211)");
   } else if (monthlyCost > 20000){
     $('#monthlyCostText').css("background-color", "lightcoral");
   }
-  $('#monthlyCostField').text('$'+Number(monthlyCost));
+  $('#monthlyCostField').text('$'+parseFloat(Number(monthlyCost)).toFixed(2));
   $(this).closest('tr').remove();
 }
