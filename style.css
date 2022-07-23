@@ -27,14 +27,14 @@ header {
 }
 
 #tableTopRow {
-  background: darkgrey;
+  background: #94b49f;
   border: 1px solid black;
   border-collapse: collapse;
   font-weight: bold;
 }
 
 #tableBotRow {
-  background: lightgrey;
+  background: #cee5d0;
   border: 1px solid black;
   border-collapse: collapse;
   height: 30px;
@@ -61,20 +61,21 @@ header {
 }
 
 #app {
-  border: 1px solid black;
+  border: 2px solid black;
   height: 600px;
   width: 900px;
   align-items: center;
-  background-color: rgb(255, 249, 211);
+  background-color: #fcf8e8;
 }
 
 #calcTitle {
   padding-top: 30px;
-  color: #f5f5f5;
-  background-color: grey;
+  color: white;
+  background-color: #ecb390;
   margin-top: 0px;
   margin-bottom: 0px;
   height: 50px;
+  border-bottom: 2px solid black;
 }
 
 #underCalcTitle {
@@ -112,5 +113,5 @@ header {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
-  background-color: #f5f5f5;
+  background-color: white;
 }

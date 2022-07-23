@@ -32,7 +32,7 @@ function submitData(){
                             <td class="ertd">`+empData[1]+`</td>
                             <td class="ertd">`+empData[2]+`</td>
                             <td class="ertd">`+empData[3]+`</td>
-                            <td class="salSpace">$`+" "+Number(empData[4])+`</td>
+                            <td class="salSpace">$`+" "+parseFloat(Number(empData[4])).toFixed(2)+`</td>
                             <td class="delBtnSpace"><button id="delBtn">Delete</button></td></tr>
                             <tr id="tableBotRow"><td id="emptyBotRow" colspan="6"></td>
                             </tr>`);
@@ -47,7 +47,7 @@ function deleteRow(){
   let numberSubtract = Number($(this).closest('tr').find('.salSpace').text().slice(2));
   monthlyCost -= numberSubtract;
   if (monthlyCost <= 20000){
-    $('#monthlyCostText').css("background-color", "rgb(255, 249, 211)");
+    $('#monthlyCostText').css("background-color", "#fcf8e8");
   } else if (monthlyCost > 20000){
     $('#monthlyCostText').css("background-color", "lightcoral");
   }
