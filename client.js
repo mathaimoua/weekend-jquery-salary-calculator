@@ -21,7 +21,7 @@ function submitData(){
   $('#idBox').val('');
   $('#titleBox').val('');
   $('#salaryBox').val('');
-  monthlyCost += Number(empData[4]);
+  monthlyCost += (Number(empData[4]))/12;
   if (monthlyCost > 20000){
     $('#monthlyCostText').css("background-color","lightcoral");
   }
@@ -45,7 +45,7 @@ function submitData(){
 
 function deleteRow(){
   let numberSubtract = Number($(this).closest('tr').find('.salSpace').text().slice(2));
-  monthlyCost -= numberSubtract;
+  monthlyCost -= (numberSubtract/12);
   if (monthlyCost <= 20000){
     $('#monthlyCostText').css("background-color", "#fcf8e8");
   } else if (monthlyCost > 20000){
